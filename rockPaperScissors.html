@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Rock, Paper, Scissors</title>
+    </head>
+
+<body>
+    <script>
+        function computerPlay() { //Generates a random number between 1 and 3 then returns the corresponding sign.
+            switch (Math.floor(Math.random() * 3) + 1) {
+                case 1:
+                    return "Rock";
+                    break;
+                case 2:
+                    return "Paper";
+                    break;   
+                case 3:
+                    return "Scissors";
+                    break;              
+    }
+}
+        function playRound(playerSelection, computerSelection) { // goes through all the cases and returns who won.
+            
+            if (playerSelection == "Rock")  {
+                if (computerSelection == "Scissors") {
+                    return "You win! Rock beats Scissors.";
+                }
+                else if (computerSelection == "Paper") {
+                    return "You loose! Scissors beat Paper.";
+                }
+                else {
+                    return "It's a tie! Both chose Rock.";
+                }
+            }
+
+            else if (playerSelection == "Scissors") {
+                if (computerSelection == "Paper") {
+                    return "You win! Scissors beat Paper.";
+                  
+                }
+                else if (computerSelection == "Rock") {
+                    return "You loose! Rock beats Scissors.";
+                }
+                else {
+                    return "It's a tie! Both chose Scissors.";
+                }
+            }
+
+            else if (playerSelection == "Paper") {
+                if (computerSelection == "Rock") {
+                    return "You win! Paper beats Rock.";
+                }
+                else if (computerSelection == "Scissors") {
+                    return "You loose! Scissors beat Paper.";
+                }
+                else {
+                    return "It's a tie! Both chose Paper.";
+                }
+            }
+            else {
+                return "No valid input." // This is too bloated. Could be reworked with switch-statement, maybe?
+            }
+}
+        var playerSelection = prompt("Please choose either Rock, Paper or Scissors") 
+        console.log(playRound(playerSelection, computerPlay()))
+
+
+    </script>
+</body>
+</html>
