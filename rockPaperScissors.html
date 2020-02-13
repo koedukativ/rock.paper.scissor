@@ -69,8 +69,7 @@
                 return "No valid input." 
             }
 }
-        function game () {
-
+        function game () { // Loop would be nice here.
             var playerSelection = prompt("Please choose either Rock, Paper or Scissors") 
             console.log(playRound(playerSelection, computerPlay()))
             console.log("The current score is: Player: " + playerScore + " - Computer: " + computerScore)
@@ -86,12 +85,7 @@
             var playerSelection = prompt("Please choose either Rock, Paper or Scissors") 
             console.log(playRound(playerSelection, computerPlay()))
             console.log("End of game. The final score is: Player: " + playerScore + " - Computer: " + computerScore)
-
         }
-
-
-
-
     </script>
 </body>
 </html>
