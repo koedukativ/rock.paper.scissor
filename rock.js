@@ -14,52 +14,50 @@ function computerPlay() { //Generates a random number between 1 and 3 then retur
         }
     }
 function playRound(playerSelection, computerSelection) { // goes through all the cases and returns who won.
-    playerSelection = playerSelection.toUpperCase()
-    if (playerSelection == "ROCK")  { // This is too bloated. Could be reworked with switch-statement, maybe?
+    if (playerSelection == 1)  { // This is too bloated. Could be reworked with switch-statement, maybe?
         if (computerSelection == "SCISSORS") {
             playerScore++;
-            return "You win! Rock beats Scissors.";
+            alert("You win! Rock beats Scissors.");
         }
         else if (computerSelection == "PAPER") {
             computerScore++;
-            return "You loose! Paper beats Rock.";
+            alert("You loose! Paper beats Rock.");
         }
         else {
-            return "It's a tie! Both chose Rock.";
+            alert("It's a tie! Both chose Rock.");
         }
     }
-    else if (playerSelection == "SCISSORS") {
+    else if (playerSelection == 3) {
         if (computerSelection == "PAPER") {
             playerScore++;
-            return "You win! Scissors beat Paper.";
+            alert("You win! Scissors beat Paper.");
         }
         else if (computerSelection == "ROCK") {
             computerScore++;
-            return "You loose! Rock beats Scissors.";
+            alert("You loose! Rock beats Scissors.");
         }
         else {
-            return "It's a tie! Both chose Scissors.";
+            alert("It's a tie! Both chose Scissors.");
             }
     }
-
-    else if (playerSelection == "PAPER") {
+    else if (playerSelection == 2) {
         if (computerSelection == "ROCK") {
             playerScore++;
-            return "You win! Paper beats Rock.";
+            alert("You win! Paper beats Rock.");
         }
         else if (computerSelection == "SCISSORS") {
             computerScore++;
-            return "You loose! Scissors beat Paper.";
+            alert("You loose! Scissors beat Paper.");
         }
         else {
-            return "It's a tie! Both chose Paper.";
+            alert("It's a tie! Both chose Paper.");
         }
     }
     else {
         return "No valid input." 
     }
  }
-function game () { 
+/*function game () { 
     for (let i = 0; i < 3; i++) {
         var playerSelection = prompt("Please choose either Rock, Paper or Scissors") 
         console.log(playRound(playerSelection, computerPlay()))
@@ -68,4 +66,11 @@ function game () {
     var playerSelection = prompt("Please choose either Rock, Paper or Scissors") 
     console.log(playRound(playerSelection, computerPlay()))
     console.log("End of game. The final score is: Player: " + playerScore + " - Computer: " + computerScore)
-}
+}*/ //game function deadtivated for now
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+        playRound(button.id, computerPlay());
+      });
+  });

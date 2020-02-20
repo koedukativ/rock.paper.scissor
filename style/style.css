@@ -1,0 +1,27 @@
+#container {
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+}
+
+button {
+    margin: 20px 20px;
+    width: 200px;
+    height: 5rem;
+    font-size: 2rem;
+    background-color: #497c6e;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#score {
+    text-align: center;
+
+}
