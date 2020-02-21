@@ -13,10 +13,23 @@ button {
     color: white;
 }
 
-h1, h2, #roundWinner, #score {
+h1, #roundWinner, #score, #gameWinner {
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1{
+    background-color: #497c6e;
+    height: 3rem;
+    font-size: 2rem;
+    margin: 20px 20px;
+    color: white;
 }
 
 button:hover {
     background-color: rgb(47, 128, 153);
+}
+
+body {
+    background-color: rgb(247, 255, 211);
 }
